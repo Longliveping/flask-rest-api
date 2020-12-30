@@ -31,7 +31,7 @@ class AuthTestCase(unittest.TestCase):
 
     def test_already_registered_user(self):
         """Test that a user cannot be registered twice."""
-        res = self.client().post('/auth/register', data=self.user_data)
+        res = self.client().post('/auth/register', data=self.user_data)git
         self.assertEqual(res.status_code, 201)
         second_res = self.client().post('/auth/register', data=self.user_data)
         self.assertEqual(second_res.status_code, 202)

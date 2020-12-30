@@ -39,6 +39,6 @@ do_install() {
   cd $pkg_prefix
   build_line "Creating virtual environment..."
   virtualenv venv
-  source venv/bin/activate
+  source venv/bin/activate.sh
   pip install -r requirements.txt
 }

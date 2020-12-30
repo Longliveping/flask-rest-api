@@ -11,7 +11,6 @@ class RegistrationView(MethodView):
     def post(self):
         # Query to see if the user already exists
         user = User.query.filter_by(email=request.data['email']).first()
-
         if not user:
             try:
                 post_data = request.data
